@@ -2,13 +2,21 @@ const router = require("express").Router();
 const db = require("../db/db.json");
 const store = require("../js/store");
 const path = require('path');
-let db = require("../db/db.json");
 
-router.get("/notes", function(request, response) {
-  res.json(db);
+router.get("/notes", (request, response) =>{
+  response.json(db);
 
   response.send(db);
 });
+
+
+// router.post("/notes", (request, response) =>{
+
+// })
+
+
+
+
 
 // other apis here
 
