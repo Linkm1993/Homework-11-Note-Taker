@@ -1,13 +1,12 @@
-// basic server template
-// see 14-FinalStarwarsApp/server-template.js
-// plus require routes 
+
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require(`./routes/htmlRoutes`);
+const htmlRoutes = require('./routes/htmlRoutes');
 
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
 // PLUS the following 
