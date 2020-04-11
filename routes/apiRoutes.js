@@ -1,9 +1,12 @@
 const router = require("express").Router();
 const db = require("../db/db.json");
+const store = require("../js/store");
+const path = require('path');
+let db = require("../db/db.json");
 
 router.get("/notes", function(request, response) {
-  // get a note
-  // see 15-HotRestaurant/Solved for more info
+  res.json(db);
+
   response.send(db);
 });
 
