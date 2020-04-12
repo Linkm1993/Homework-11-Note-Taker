@@ -1,8 +1,7 @@
-// a class to read, write & delete notes.
-
-// This package will be used to generate our unique ids. https://www.npmjs.com/package/uuid
+//libary for generating unique IDs
 const uuidv1 = require('uuid/v1');
 
+//exporting template for notes
 module.exports = (body) => {
    return data = {
       title: body.title,
@@ -11,17 +10,3 @@ module.exports = (body) => {
    }
 }
 
-/* see 
-   09-NodeJS/01-Activities/34-Ins_Introduce-Promises
-   or 09-NodeJS/01-Activities/38-Ins_Async-Await
-   for ideas about doing asynchronous operations like fs.readFile & fs.writeFile.
-   you will have to write to db/db.json for this homework.
-   
-   let bodyResponse = response.body;
-   let newNote = {
-      "title": bodyResponse.title,
-      "text": bodyResponse.text,
-      "id": uuidv1()
-   }
-
-   */
